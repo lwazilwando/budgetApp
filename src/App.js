@@ -5,9 +5,11 @@ import './App.css';
 
 
 import React,{useState} from 'react'
+import Home from './components/home'
+import Login from './components/login';
+import SignUp from './components/signup';
 
-import AddItem  from './components/addItem' 
-import DisplayTransaction from './components/DispalyTransaction'
+import {BrowserRouter as Router,Switch,Route} from 'react-router-dom' 
 
 function App() {
 
@@ -24,12 +26,21 @@ function App() {
     }])
   })
   return (
-    <div className="container">
 
-      <DisplayTransaction list= {transaction}/>
-      <AddItem add={addTransaction}/>
+    <Router>
 
-    </div>
+      <Switch>
+        <Route exact path="/" component={Login}></Route>
+        <Route path="/sign-up" component={SignUp}></Route>
+        <Route path="/home">
+        < Home list={transaction}  add={addTransaction} />
+        </Route>
+        
+      </Switch>
+    
+    </Router>
+    
+    
   );
 }
 export default App;

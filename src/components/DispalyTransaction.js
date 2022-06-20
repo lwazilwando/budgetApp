@@ -1,7 +1,7 @@
 import React from 'react'
 
 import '../css/display.css'
-function DisplayTransaction(props){
+function DispalyTransaction(props){
 
     return(
         
@@ -60,4 +60,4 @@ function DisplayTransaction(props){
 
 
 }
-export default DisplayTransaction
+export default DispalyTransaction
