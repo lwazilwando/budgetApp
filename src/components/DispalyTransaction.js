@@ -6,15 +6,16 @@ function DispalyTransaction(props){
     return(
         
         <div>
+            <h1 style={{paddingTop:"5%"}}>Transaction History</h1>
             {props.list.map((item)=>(
-                <div>
+                <div style={{marginTop:"5%"}}>
 
                     {item.transactionType == "Expense" ? (
 
                         <div className="transaction-item">
                         <div>
                             <h4 style={{paddingLeft:'12px',paddingTop:"25px"}}>
-                                {item.amount}
+                                {item.item}
                                 </h4>
                         </div>
                         <div>

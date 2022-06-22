@@ -8,7 +8,7 @@
     
 }
 .expense-line{
-    border-right: 4px solid black;
+    border-right: 4px solid rgb(255, 3, 3);
     margin-left: 100px;
 }
 .income-line{
